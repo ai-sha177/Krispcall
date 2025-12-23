@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #f7f7fb;
+}
+
+/* ================= BRAND COLORS ================= */
+:root {
+  --primary-start: #EA66FF;
+  --primary-mid: #8548FF;
+  --primary-end: #EA66FF;
+  --primary-dark: #6b34e3;
+  --primary-light: #f6e9ff;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-mid);
+  display: flex;
+  align-items: center;
+}
+
+
+.logo-icon {
+  background: linear-gradient(
+    301deg,
+    var(--primary-start),
+    var(--primary-mid)
+  );
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 6px;
+}
+
+.navbar {
+  position: relative;
+  z-index: 200;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-item {
+  cursor: pointer;
+  font-weight: 500;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: var(--primary-mid);
+}
+
+.nav-item i {
+  font-size: 11px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login {
+  cursor: pointer;
+}
+
+/* ================= 3D CTA BUTTON ================= */
+.cta {
+  position: relative;
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(
+    301deg,
+    var(--primary-start),
+    var(--primary-mid),
+    var(--primary-end)
+  );
+  box-shadow:
+    0 6px 0 var(--primary-dark),
+    0 14px 28px rgba(133, 72, 255, 0.45);
+  transition: all 0.18s ease;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0)
+  );
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 0 var(--primary-dark),
+    0 18px 34px rgba(133, 72, 255, 0.55);
+}
+
+.cta:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 var(--primary-dark),
+    0 8px 18px rgba(133, 72, 255, 0.4);
+}
+
+/* ================= MEGA MENU ================= */
+.mega {
+  display: flex;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.hidden {
+  display: none;
+}
+
+.mega-left {
+  width: 260px;
+  padding: 24px;
+  border-right: 1px solid #eee;
+}
+
+.left-item {
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.left-item.active {
+  background: var(--primary-light);
+  color: var(--primary-mid);
+  font-weight: 500;
+}
+
+.left-item:hover {
+  background: #faf7ff;
+}
+
+.muted {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* ================= BADGES ================= */
+.badge {
+  background: linear-gradient(
+    301deg,
+    var(--primary-start),
+    var(--primary-mid)
+  );
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+}
+
+.badge.gray {
+  background: #ccc;
+}
+
+/* ================= CONTENT GRID ================= */
+.mega-right {
+  flex: 1;
+  padding: 30px;
+}
+
+.content-grid {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.content-grid.active {
+  display: grid;
+}
+
+/* ================= CARDS ================= */
+.card {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.card i {
+  color: var(--primary-mid);
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.card h4 {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #666;
+}
+
+.card.highlight {
+  background: var(--primary-light);
+  border-color: #e4d9ff;
+}
+/* ================= BACKDROP OVERLAY ================= */
+/* ================= BACKDROP OVERLAY (BELOW NAVBAR) ================= */
+.menu-backdrop {
+  position: fixed;
+  top: 70px;              /* SAME height as navbar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 90;
+  transition: opacity 0.25s ease;
+}
+
+.menu-backdrop.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+/* Ensure mega menu stays above backdrop */
+.mega {
+  position: absolute;
+  top: 70px; /* navbar height */
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
