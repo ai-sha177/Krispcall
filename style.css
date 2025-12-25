@@ -28,25 +28,28 @@ body {
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
-  color: var(--primary-mid);
   display: flex;
   align-items: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.005);
 }
 
+.logo-text {
+  background: linear-gradient(301deg, var(--primary-start), var(--primary-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+/* Keep .logo-icon normal */
 .logo-icon {
-  background: linear-gradient(
-    301deg,
-    var(--primary-start),
-    var(--primary-mid)
-  );
+  background: linear-gradient(301deg, var(--primary-start), var(--primary-mid));
   color: #fff;
   padding: 6px 10px;
   border-radius: 8px;
   margin-right: 6px;
 }
+
 
 .navbar {
   position: relative;
@@ -56,17 +59,19 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 30px;
+    margin-left: 50px;
 }
 
 .nav-item {
   cursor: pointer;
-  font-weight: 500;
-  color: #222;
+  font-weight: 300;
+  color: #1A1A1A;
   display: flex;
   align-items: center;
   gap: 6px;
   transition: color 0.2s ease;
+  font-size: 16px;
 }
 
 .nav-item:hover {
@@ -80,7 +85,7 @@ body {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .login {
@@ -95,46 +100,41 @@ body {
   font-weight: 600;
   color: #fff;
   border: none;
-  border-radius: 12px;
+  border-radius: 5px;
   cursor: pointer;
-  background: linear-gradient(
-    301deg,
-    var(--primary-start),
-    var(--primary-mid),
-    var(--primary-end)
-  );
+  background: linear-gradient(301deg, #EA66FF, #8548FF, #EA66FF);
+
   box-shadow:
-    0 6px 0 var(--primary-dark),
-    0 14px 28px rgba(133, 72, 255, 0.45);
+    -4px 8px 0 #6314FF,     /* main depth */
+    -2px 14px 22px rgba(99, 20, 255, 0.45); /* soft glow */
+
   transition: all 0.18s ease;
-  overflow: hidden;
 }
 
+
 .cta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.4),
-    rgba(255,255,255,0)
-  );
+     content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(301deg, #EA66FF, #8548FF, #EA66FF);
+    background-size: 180% 180%;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    z-index: 0;
 }
 
 .cta:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 8px 0 var(--primary-dark),
-    0 18px 34px rgba(133, 72, 255, 0.55);
+    -5px 10px 26px rgba(99, 20, 255, 0.55);
 }
 
 .cta:active {
-  transform: translateY(4px);
+  transform: translateY(3px);
   box-shadow:
-    0 2px 0 var(--primary-dark),
-    0 8px 18px rgba(133, 72, 255, 0.4);
+    -2px 6px 14px rgba(99, 20, 255, 0.4);
 }
+
 
 /* ================= MEGA MENU ================= */
 .mega {
@@ -148,18 +148,24 @@ body {
 }
 
 .mega-left {
-  width: 260px;
+  width: 280px;
   padding: 24px;
   border-right: 1px solid #eee;
+   width: 280px;
+  flex-shrink: 0;
 }
 
 .left-item {
   padding: 12px 14px;
   border-radius: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   cursor: pointer;
   transition: background 0.2s ease;
+
+   /* optional but recommended */
 }
+
+
 
 .left-item.active {
   background: var(--primary-light);
@@ -178,15 +184,11 @@ body {
 
 /* ================= BADGES ================= */
 .badge {
-  background: linear-gradient(
-    301deg,
-    var(--primary-start),
-    var(--primary-mid)
-  );
+  background: #8733ff;
   color: #fff;
   font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 999px;
+  padding: 5px 8px;
+  border-radius: 2px;
   margin-left: 6px;
 }
 
@@ -198,12 +200,16 @@ body {
 .mega-right {
   flex: 1;
   padding: 30px;
+
+  min-width: 0;    /* 🔥 allows text to wrap instead of pushing sidebar */
 }
+
+
 
 .content-grid {
   display: none;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 7px;
 }
 
 .content-grid.active {
@@ -253,9 +259,12 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.45);
+   backdrop-filter: blur(1px);
   z-index: 90;
   transition: opacity 0.25s ease;
 }
+
+
 
 .menu-backdrop.hidden {
   opacity: 0;
@@ -273,4 +282,508 @@ body {
   z-index: 100;
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
+/* ===== FEATURE CARD STYLE (SCREENSHOT MATCH) ===== */
 
+/* ===== FEATURE CARD STYLE (HOVER ONLY – NO DEFAULT HIGHLIGHT) ===== */
+
+.feature-card {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.feature-card:hover {
+  background: #faf7ff;                 /* same feel as navbar hover */
+
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d6d6e7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon i {
+  font-size: 18px;
+  color: var(--primary-mid);
+}
+
+.feature-content h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #242424;
+  transition: color 0.2s ease;
+}
+
+
+
+
+.feature-card:hover h4 {
+  color: var(--primary-mid);           /* navbar hover color */
+}
+
+.feature-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #474e5a;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   POWER DIALER – FINAL SECTION (PIXEL PERFECT)
+===================================================== */
+
+/* override default content-grid behavior */
+#powerDialer {
+  display: none;
+  padding-top:30px ;
+  max-width: 100%;
+  
+}
+
+#powerDialer.active {
+  display: block;
+}
+
+/* alignment wrapper – shifts header + cards together */
+#powerDialer .pw-align {
+  transform: translateX(-22px);
+  padding-right: 22px;
+}
+
+/* ================= HEADER ================= */
+
+#powerDialer .pw-header {
+  margin-bottom: 30px;
+}
+
+#powerDialer .pw-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 20px;
+}
+
+#powerDialer .pw-header p {
+  font-size: 16px;
+  color: #5a5f6b;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* ================= GRID ================= */
+
+.power-dialer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ================= CARDS ================= */
+
+.power-dialer-grid .feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #ededf3;
+  cursor: default;
+}
+
+/* no hover lift (matches screenshot) */
+.power-dialer-grid .feature-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ================= ICON ================= */
+
+.power-dialer-grid .feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #f6e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.power-dialer-grid .feature-icon i {
+  font-size: 20px;
+  color: var(--primary-mid);
+}
+
+/* ================= TEXT ================= */
+
+.power-dialer-grid .feature-content h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  margin: 0 0 6px;
+}
+
+.power-dialer-grid .feature-content p {
+  font-size: 14px;
+  color: #5a5f6b;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ================= LEARN MORE ================= */
+
+.pd-learn-more {
+  grid-column: 3 / 4;
+  justify-self: end;
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: var(--primary-mid);
+  cursor: pointer;
+    margin-right: 100px; 
+}
+
+
+.pd-learn-more i {
+  font-size: 15px;
+  transition: transform 0.2s ease;
+  font-weight: 700;
+}
+
+.pd-learn-more:hover i {
+  transform: translateY(2px);
+}
+.pd-learn-more span {
+  font-weight: 700;
+}
+
+/* AI Copilot */
+
+#aiCopilot {
+ display: none;
+  padding-top:30px ;
+  max-width: 100%;
+  
+}
+
+#aiCopilot.active {
+  display: block;
+}
+
+
+#aiCopilot .pw-align {
+  transform: translateX(-22px);
+  padding-right: 22px;
+}
+#aiCopilot .pw-header {
+  margin-bottom: 30px;
+}
+
+#aiCopilot .pw-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 20px;
+}
+
+#aiCopilot .pw-header p {
+  font-size: 16px;
+  color: #5a5f6b;
+  max-width: 520px;
+  margin: 0;
+}
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;              /* space between text & badge */
+  flex-wrap: nowrap;     /* prevents wrapping */
+}
+
+.title-row h4 {
+  margin: 0;
+  white-space: nowrap;
+}
+/* ================= AI Copilot GRID ================= */
+#aiCopilot .power-dialer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 12px 16px; /* first value = row gap, second = column gap */
+}
+
+/* ================= AI Copilot CARDS ================= */
+#aiCopilot .feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;          /* space between icon and text */
+  padding: 14px 16px; /* less padding for shorter height */
+  border-radius: 12px;
+  background: #fff;   /* you can also set it to transparent if you want */
+  border: none;       /* remove border */
+  cursor: default;
+}
+
+/* ICON */
+#aiCopilot .feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f6e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#aiCopilot .feature-icon i {
+  font-size: 18px;
+  color: var(--primary-mid);
+}
+
+/* TEXT */
+#aiCopilot .feature-content h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #242424;
+  margin: 0 0 4px;
+}
+
+#aiCopilot .feature-content p {
+  font-size: 14px;
+  color: #474e5a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* optional: reduce height of badge row */
+#aiCopilot .title-row {
+  gap: 6px;
+}
+
+
+/* 2FA */
+
+
+#fa {
+ display: none;
+  padding-top:30px ;
+  max-width: 100%;
+  
+}
+
+#fa.active {
+  display: block;
+}
+
+
+#fa .pw-align {
+  transform: translateX(-22px);
+  padding-right: 22px;
+}
+#fa .pw-header {
+  margin-bottom: 30px;
+}
+
+#fa .pw-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 20px;
+}
+
+#fa .pw-header p {
+  font-size: 16px;
+  color: #5a5f6b;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* Lead Capture */
+
+
+#leadCapture {
+ display: none;
+  padding-top:30px ;
+  max-width: 100%;
+  
+}
+
+#leadCapture.active {
+  display: block;
+}
+
+
+#leadCapture .pw-align {
+  transform: translateX(-22px);
+  padding-right: 22px;
+}
+#leadCapture .pw-header {
+  margin-bottom: 30px;
+}
+
+#leadCapture .pw-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  
+  margin: 0 0 20px;
+}
+
+#leadCapture .pw-header p {
+  font-size: 16px;
+  color: #5a5f6b;
+  max-width: 520px;
+  margin: 0;
+}
+#leadCapture .pw-header h2.feature-title {
+  color: #8733ff; /* Lead Capture Widget text color */
+}
+
+#leadCapture .pw-header h2.feature-title .coming-soon {
+  color: black; /* Coming Soon text color */
+}
+
+/* AI Coaching */
+
+
+#aiCoaching {
+ display: none;
+  padding-top:30px ;
+  max-width: 100%;
+  
+}
+
+#aiCoaching.active {
+  display: block;
+}
+
+
+#aiCoaching .pw-align {
+  transform: translateX(-22px);
+  padding-right: 22px;
+}
+#aiCoaching .pw-header {
+  margin-bottom: 30px;
+}
+
+#aiCoaching .pw-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  
+  margin: 0 0 20px;
+}
+
+#aiCoaching .pw-header p {
+  font-size: 16px;
+  color: #5a5f6b;
+  max-width: 520px;
+  margin: 0;
+}
+/* ================= AI Coaching GRID ================= */
+#aiCoaching .power-dialer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 12px 16px; /* first = row gap, second = column gap */
+}
+
+/* ================= AI Coaching CARDS ================= */
+#aiCoaching .feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;          /* space between icon and text */
+  padding: 14px 16px; /* less padding for shorter height */
+  border-radius: 12px;
+  background: #fff;   /* or transparent if desired */
+  border: none;       /* remove border */
+  cursor: default;
+}
+
+/* ICON */
+#aiCoaching .feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f6e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#aiCoaching .feature-icon i {
+  font-size: 18px;
+  color: var(--primary-mid);
+}
+
+/* TEXT */
+#aiCoaching .feature-content h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #242424;
+  margin: 0 0 4px;
+}
+
+#aiCoaching .feature-content p {
+  font-size: 14px;
+  color: #474e5a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* optional: reduce height of badge row */
+#aiCoaching .title-row {
+  gap: 6px;
+}
+
+
+
+/* Patent */
+
+
+#patent {
+ display: none;
+  padding-top:30px ;
+  max-width: 100%;
+  
+}
+
+#patent.active {
+  display: block;
+}
+
+
+#patent .pw-align {
+  transform: translateX(-22px);
+  padding-right: 22px;
+}
+#patent .pw-header {
+  margin-bottom: 30px;
+}
+
+#patent .pw-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  
+  margin: 0 0 20px;
+}
+
+#patent .pw-header p {
+  font-size: 15px;
+  color: #5a5f6b;
+  max-width: 520px;
+  margin: 0;
+}
+ 

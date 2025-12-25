@@ -5,32 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KrispCall Mega Menu</title>
 
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- ================= NAVBAR ================= -->
 <header class="navbar">
-  <div class="logo">
-    <span class="logo-icon">K</span>
-    Krisp<span>Call</span>
-  </div>
+ <div class="logo">
+  <span class="logo-icon">K</span>
+  <span class="logo-text">KrispCall</span>
+</div>
+
 
   <nav class="nav-links">
-    <div class="nav-item" id="aiBtn">
-      AI Products <i class="fa-solid fa-chevron-down"></i>
-    </div>
-
-    <div class="nav-item" id="solutionsBtn">
-      Solutions <i class="fa-solid fa-chevron-down"></i>
-    </div>
-
+     <div class="nav-item">100+ CRM Integrations</div>
+    <div class="nav-item" id="aiBtn">AI Products <i class="fa-solid fa-chevron-down"></i></div>
+    <div class="nav-item" id="solutionsBtn">Solutions <i class="fa-solid fa-chevron-down"></i></div>
     <div class="nav-item">Pricing</div>
-    <div class="nav-item">Free tools</div>
-    <div class="nav-item">Resources</div>
-    <div class="nav-item">Partner</div>
+    <div class="nav-item">Free tools <i class="fa-solid fa-chevron-down"></i></div>
+    <div class="nav-item">Resources <i class="fa-solid fa-chevron-down"></i></div>
+    <div class="nav-item">Partner <i class="fa-solid fa-chevron-down"></i></div>
   </nav>
 
   <div class="nav-right">
@@ -39,39 +35,538 @@
   </div>
 </header>
 
-<!-- 🔽 ONLY ADDITION -->
+<!-- 🔽 Menu Backdrop -->
 <div class="menu-backdrop hidden" id="menuBackdrop"></div>
-<!-- 🔼 ONLY ADDITION -->
 
 <!-- ================= AI PRODUCTS ================= -->
 <section class="mega hidden" id="aiSection">
   <aside class="mega-left">
     <div class="left-item active" data-ai="telephony">Cloud Telephony</div>
     <div class="left-item" data-ai="number">Cloud Number</div>
-    <div class="left-item">SMS Marketing <span class="badge">New</span></div>
-    <div class="left-item">Power Dialer</div>
-    <div class="left-item">AI Copilot <span class="badge">New</span></div>
-    <div class="left-item">2FA <span class="badge">New</span></div>
-    <div class="left-item">Lead Capture Widget <span class="badge">Coming Soon</span></div>
-    <div class="left-item">AI Coaching</div>
-    <div class="left-item">Patent <span class="badge">Coming Soon</span></div>
+    <div class="left-item" data-ai="SMSMarketing">SMS Marketing <span class="badge">New</span></div>
+<div class="left-item" data-ai="powerDialer">Power Dialer</div>
+
+    <div class="left-item" data-ai="aiCopilot">AI Copilot <span class="badge">New</span></div>
+    <div class="left-item" data-ai="fa">2FA <span class="badge">New</span></div>
+    <div class="left-item" data-ai="leadCapture">Lead Capture Widget <span class="badge">Coming Soon</span></div>
+    <div class="left-item" data-ai="aiCoaching">AI Coaching</div>
+    <div class="left-item" data-ai="patent">Patent <span class="badge">Coming Soon</span></div>
   </aside>
 
   <div class="mega-right">
-    <div class="content-grid active" id="telephony">
-      <div class="card"><i class="fa-solid fa-circle-dot"></i><h4>Unified CallBox</h4><p>Access all telephony interactions from one dashboard.</p></div>
-      <div class="card"><i class="fa-solid fa-phone"></i><h4>Call Forward</h4><p>Forward calls to alternate numbers.</p></div>
-      <div class="card"><i class="fa-solid fa-clock"></i><h4>Call Log History</h4><p>Never miss call details.</p></div>
-      <div class="card"><i class="fa-solid fa-comments"></i><h4>Text Messaging</h4><p>Send & receive SMS globally.</p></div>
-      <div class="card"><i class="fa-solid fa-globe"></i><h4>Global Calling</h4><p>Call 100+ countries.</p></div>
-      <div class="card"><i class="fa-solid fa-voicemail"></i><h4>Voicemail</h4><p>Receive recorded messages.</p></div>
+
+    <!-- Telephony Content -->
+
+    <div class="content-grid active " id="telephony">
+      <div class="feature-card ">
+        <div class="feature-icon"><i class="fa-solid fa-circle-dot"></i></div>
+        <div class="feature-content">
+          <h4>Unified CallBox</h4>
+          <p>Access all your telephony interactions from a unified dashboard.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="feature-content">
+          <h4>Call Forward</h4>
+          <p>Ensure all calls get through by forwarding them to alternate numbers.</p>
+        </div>
+      </div>
+       <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="feature-content">
+          <h4>Phone Number Porting</h4>
+          <p>Port Your Phone Number Online to Cloud.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="feature-content">
+          <h4>Call Log History</h4>
+          <p>Never miss a detail of old conversations.</p>
+        </div>
+      </div>
+       <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="feature-content">
+          <h4>Call Transfer</h4>
+          <p>Transfer Your Calls To The Right Agent For Better Customer Service.</p>
+        </div>
+      </div>
+       <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="feature-content">
+          <h4>Inbound Call Centre Solution</h4>
+          <p>A Smarter Inbound Call Center for Superior Customer Engagement.</p>
+        </div>
+      </div>
+        <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="feature-content">
+          <h4>Multiple Numbers</h4>
+          <p>Get Multiple Phone Numbers In A Single Phone.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+        <div class="feature-content">
+          <h4>Text Messaging</h4>
+          <p>Send & receive SMS to/from 100+ countries.</p>
+        </div>
+      </div>
+       <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+        <div class="feature-content">
+          <h4>Outbound Call Centre Solution</h4>
+          <p>Outbound Call Center Software That Boosts Sales & Customer Reach.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+        <div class="feature-content">
+          <h4>Global Calling</h4>
+          <p>Make international calls in 100+ countries.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-voicemail"></i></div>
+        <div class="feature-content">
+          <h4>Voicemail</h4>
+          <p>Allow callers to leave recorded messages.</p>
+     
+        </div>
+      </div>
+      <div class="pd-learn-more">
+       <span>View More Features</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
     </div>
 
-    <div class="content-grid" id="number">
-      <div class="card"><i class="fa-solid fa-hashtag"></i><h4>Buy Numbers</h4><p>Purchase global numbers.</p></div>
-      <div class="card"><i class="fa-solid fa-right-left"></i><h4>Number Porting</h4><p>Port your existing numbers.</p></div>
+    <!-- Number Content -->
+
+    <div class="content-grid " id="number">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-hashtag"></i></div>
+        <div class="feature-content">
+          <h4>Local Number</h4>
+          <p> Get a Custom Local Phone Number Online</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-right-left"></i></div>
+        <div class="feature-content">
+          <h4>Mobile Number</h4>
+          <p>Get a Virtual Phone Number Now.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-right-left"></i></div>
+        <div class="feature-content">
+          <h4>Toll-free Number</h4>
+          <p>Get a Virtual Toll-free Number For Business.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-right-left"></i></div>
+        <div class="feature-content">
+          <h4>Vanity Number</h4>
+          <p>Get a Memorable vanity phone number for business.</p>
+        </div>
+      </div>
+    </div>
+
+                     <!-- SMS Marketing -->
+
+    <div class="content-grid" id="SMSMarketing">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-regular fa-message"></i></div>
+        <div class="feature-content">
+          <h4>Bulk SMS</h4>
+          <p> Engage your audience instantly with KrispCall's Bulk SMS Marketing.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-regular fa-comment-dots"></i></div>
+        <div class="feature-content">
+          <h4>Mass Texting </h4>
+          <p>Connect instantly with KRispCall's mass texting feature.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-regular fa-message"></i></div>
+        <div class="feature-content">
+          <h4>Business Text Messaging </h4>
+          <p>Send,receive,and manage business text with ease.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-message"></i></div>
+        <div class="feature-content">
+          <h4> Personalized Text Messaging </h4>
+          <p>Craft custom messages that spark real connections.</p>
+        </div>
+      </div>
+       <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-message"></i></div>
+        <div class="feature-content">
+          <h4>Automated Text Messaging</h4>
+          <p>Deliver timely,personalized texts on Autopilot.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-regular fa-comment-dots"></i></div>
+        <div class="feature-content">
+          <h4>VOIP Texting</h4>
+          <p>Text using VoIP numbers from any device.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-regular fa-comment-dots"></i></div>
+        <div class="feature-content">
+          <h4>AI SMS</h4>
+          <p>Boost outreach and response rate with the power of AI.</p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- ================= POWER DIALER ================= -->
+   <div class="content-grid" id="powerDialer">
+
+  <div class="pw-align">
+
+    <!-- HEADER -->
+    <div class="pw-header">
+      <h2>Power Dialer</h2>
+      <p>Increase your agent efficiency and productivity with power dialer</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="power-dialer-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Contact Customization</h4>
+          <p>Tailor your approach to each contact by accessing specific information</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-infinity"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Unlimited Calling</h4>
+          <p>Unlimited calls, no extra charges.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-filter"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Call Filtering</h4>
+          <p>Filter out unanswered, unavailable and busy calls.</p>
+        </div>
+      </div>
+      <div class="pd-learn-more">
+  <span>Learn more</span>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+  <!-- ================= AI Copilot ================= -->
+   <div class="content-grid" id="aiCopilot">
+
+  <div class="pw-align">
+
+    <!-- HEADER -->
+    <div class="pw-header">
+      <h2>AI Copilot</h2>
+      <p>Transform your business calls with our cloud telephony system</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="power-dialer-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-regular fa-comment-dots"></i>
+        </div>
+        <div class="feature-content">
+          <h4>AI Rephrasing</h4>
+          <p>Reply your replies for clarity or variety.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+   <i class="fa-regular fa-message"></i>
+        </div>
+        <div class="feature-content">
+          <h4>AI Reply</h4>
+          <p>Automatically respond to common customer inquiries.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-filter"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Call Transcription</h4>
+          <p>Transcribe recorded calls with a click and easily reference the conversation later.</p>
+        </div>
+      </div>
+        <div class="feature-card">
+        <div class="feature-icon">
+   <i class="fa-regular fa-file-lines"></i>
+        </div>
+        <div class="feature-content">
+      <div class="title-row">
+        <h4>Call Summary</h4>
+         <span class="badge">Coming Soon</span>
+        </div>
+
+          <p>Summarize your recorded calls  to ensure you capture every detail.</p>
+        </div>
+      </div>
+
+       
+      <div class="pd-learn-more">
+  <span>Learn more</span>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ================= 2FA================= -->
+   <div class="content-grid" id="fa">
+
+  <div class="pw-align">
+
+    <!-- HEADER -->
+    <div class="pw-header">
+      <h2>2FA</h2>
+      <p>Your AI-powered assistant for smarter communication</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="power-dialer-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+        <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Get OTP codes</h4>
+          <p>Instantly get OTP codes for seamless authentication</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+    <i class="fa-regular fa-calendar-check"></i>
+        </div>
+        <div class="feature-content">
+          <h4>100 % Deliverability Gurantee</h4>
+          <p>Guranteed delivery of every authentication code</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+       <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="feature-content">
+          <h4>OTP delivery for your team</h4>
+          <p>Streamline your team's login experience </p>
+        </div>
+      </div>
+
+      
+
+      <div class="pd-learn-more">
+  <span>Learn more</span>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ================= lead capture================= -->
+   <div class="content-grid" id="leadCapture">
+
+  <div class="pw-align">
+
+    <!-- HEADER -->
+    <div class="pw-header">
+      <h2 class="feature-title">
+  Lead Capture Widget
+  <span class="coming-soon">- Coming Soon</span>
+</h2>
+
+      <p>Effortlessly capture high-quality leads and boost conversion rates with KrispCall’s lead capture widget.</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="power-dialer-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+        <i class="fa-solid fa-users"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Increase your visitors</h4>
+          <p>Transform casual visitors into engaged prospects with...</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+    <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Instant lead alerts</h4>
+          <p>Receive instant notifications from visitor messages,ensuri..</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+     <i class="fa-regular fa-calendar"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Simplify follow-ups </h4>
+          <p>Allow leads to easily schedule callbacks with preferred dates... </p>
+        </div>
+      </div>
+
+      
+
+      <div class="pd-learn-more">
+  <span>Learn more</span>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ================= AI Coaching================= -->
+   <div class="content-grid" id="aiCoaching">
+
+  <div class="pw-align">
+
+    <!-- HEADER -->
+    <div class="pw-header">
+      <h2>AI Coaching</h2>
+      <p>Guide your team in real-time with advanced call barging, whispering, and listening.</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="power-dialer-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+      <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Call Barging</h4>
+          <p>Intervene in live calls to provide support agents or take over</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+      <i class="fa-solid fa-ear-listen"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Call Whispering</h4>
+          <p>Hear live calls and guide the call agents with verbal advice</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+        <i class="fa-solid fa-ear-listen"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Call Listening</h4>
+          <p>Monitor live calls to ensure quality customer service</p>
+        </div>
+      </div>
+
+      
+
+</div>
+</div>
+</div>
+
+<!-- ================= Patent================= -->
+   <div class="content-grid" id="patent">
+
+  <div class="pw-align">
+
+    <!-- HEADER -->
+    <div class="pw-header">
+      <h2>Patent</h2>
+      <p>Transforming Contact Centers with Cutting-Edge AI</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="power-dialer-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+       <i class="fa-solid fa-database"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Data Aggregation</h4>
+          <p>Aggregate contact data from various sources and maintain a unified view./p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+     <i class="fa-solid fa-chart-area"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Smart Matching</h4>
+          <p>Use DL algorithms to map agents with the best-fit customers.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+     <i class="fa-solid fa-chart-column"></i>
+        </div>
+        <div class="feature-content">
+          <h4>Insight Extraction</h4>
+          <p>Utilize NLP to analyze conversations and extract valuable insights.</p>
+        </div>
+      </div>
+
+      
+
+      <div class="pd-learn-more">
+  <span>Learn more</span>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+</div>
+</div>
+</div>
+
+
+
 </section>
 
 <!-- ================= SOLUTIONS ================= -->
@@ -83,16 +578,106 @@
   </aside>
 
   <div class="mega-right">
+
+    <!-- Needs Content -->
     <div class="content-grid active" id="needs">
-      <div class="card"><i class="fa-solid fa-wifi"></i><h4>Internet Telephony</h4><p>Efficient internet-based calling.</p></div>
-      <div class="card"><i class="fa-solid fa-microphone"></i><h4>Virtual Receptionist</h4><p>Smart automated call handling.</p></div>
-      <div class="card highlight"><i class="fa-solid fa-building"></i><h4>Office Phone System</h4><p>Advanced business phone system.</p></div>
-      <div class="card"><i class="fa-solid fa-headset"></i><h4>Auto Attendant</h4><p>Handle high call volumes.</p></div>
-      <div class="card"><i class="fa-solid fa-desktop"></i><h4>Live Call Monitoring</h4><p>Monitor calls in real time.</p></div>
-      <div class="card"><i class="fa-solid fa-record-vinyl"></i><h4>Sales Call Recording</h4><p>Analyze sales performance.</p></div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-wifi"></i></div>
+        <div class="feature-content">
+          <h4>Internet Telephony</h4>
+          <p>Efficient internet-based calling solutions for businesses.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-microphone"></i></div>
+        <div class="feature-content">
+          <h4>Virtual Receptionist</h4>
+          <p>Smart automated call handling and routing.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-building"></i></div>
+        <div class="feature-content">
+          <h4>Office Phone System</h4>
+          <p>Advanced business phone system for any team size.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+        <div class="feature-content">
+          <h4>Auto Attendant</h4>
+          <p>Handle high call volumes with automated menus.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-desktop"></i></div>
+        <div class="feature-content">
+          <h4>Live Call Monitoring</h4>
+          <p>Monitor calls in real-time to improve performance.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-record-vinyl"></i></div>
+        <div class="feature-content">
+          <h4>Sales Call Recording</h4>
+          <p>Record and analyze sales calls for insights.</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Industries Content -->
+    <div class="content-grid" id="industries">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-hospital"></i></div>
+        <div class="feature-content">
+          <h4>Healthcare</h4>
+          <p>Custom telephony solutions for clinics and hospitals.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <div class="feature-content">
+          <h4>Finance</h4>
+          <p>Secure call management for banks and financial services.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-shop"></i></div>
+        <div class="feature-content">
+          <h4>Retail</h4>
+          <p>Streamline customer support and sales calls.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Teams Content -->
+    <div class="content-grid" id="teams">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+        <div class="feature-content">
+          <h4>Small Teams</h4>
+          <p>Simple phone solutions for teams of 1-10 members.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-people-group"></i></div>
+        <div class="feature-content">
+          <h4>Medium Teams</h4>
+          <p>Scalable telephony for teams of 10-50 members.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-building"></i></div>
+        <div class="feature-content">
+          <h4>Enterprise</h4>
+          <p>Robust call solutions for large teams and call centers.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <script src="script.js"></script>
 </body>

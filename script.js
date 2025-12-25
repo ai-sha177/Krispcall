@@ -54,23 +54,39 @@ solutionsSection.addEventListener("click", e => e.stopPropagation());
    AI SIDEBAR SWITCHING
 ======================= */
 
+/* =======================
+   AI SIDEBAR SWITCHING (GRID + POWER DIALER)
+======================= */
+
 document.querySelectorAll("[data-ai]").forEach(item => {
   item.addEventListener("click", () => {
+
+    // Sidebar active state
     document
       .querySelectorAll("#aiSection .left-item")
       .forEach(i => i.classList.remove("active"));
 
     item.classList.add("active");
 
+    // Hide all grid contents
     document
       .querySelectorAll("#aiSection .content-grid")
       .forEach(c => c.classList.remove("active"));
 
-    document
-      .getElementById(item.dataset.ai)
-      ?.classList.add("active");
+    // Hide power dialer explicitly
+    const powerDialer = document.getElementById("powerDialer");
+    powerDialer?.classList.remove("active");
+
+    // Show selected content
+    const targetId = item.dataset.ai;
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+      targetEl.classList.add("active");
+    }
   });
 });
+
 
 /* =======================
    SOLUTIONS SIDEBAR SWITCHING
